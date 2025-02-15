@@ -1,0 +1,437 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 774
+        length: 100
+        placeholder_text: "...  # TODO реализуйте проверку"
+        initial_state:
+          length: 31
+          offset: 774
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(title, str):
+                      return TypeError()
+        selected: true
+        status: Failed
+      - offset: 1041
+        length: 31
+        placeholder_text: "...  # TODO реализуйте проверку"
+        initial_state:
+          length: 31
+          offset: 972
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(author, (str, type(None))):
+                      return TypeError()
+        selected: false
+        status: Failed
+      - offset: 1395
+        length: 168
+        placeholder_text: "...  # TODO реализуйте проверку"
+        initial_state:
+          length: 31
+          offset: 1242
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(year, (int, type(None))):
+                      return TypeError()
+                  if not year > 0:
+                      return ValueError()
+        selected: true
+        status: Failed
+      - offset: 2050
+        length: 115
+        placeholder_text: "# TODO добавьте свойство is_checked_out (на чтение). Возвра\
+      щает \"Выдано\" если is_checked_out=True, иначе \"Доступно\""
+        initial_state:
+          length: 115
+          offset: 1760
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def is_checked_out(self):
+                  return "Выдано" if self.__is_checked_out else "Доступно"
+        selected: false
+        status: Failed
+      - offset: 2279
+        length: 105
+        placeholder_text: "# TODO добавьте свойство title (на чтение)"
+        initial_state:
+          length: 42
+          offset: 1881
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def title(self):
+                  return self.__title
+        selected: true
+        status: Failed
+      - offset: 2390
+        length: 108
+        placeholder_text: "# TODO добавьте свойство author (на чтение)"
+        initial_state:
+          length: 43
+          offset: 1929
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def author(self):
+                  return self.__author
+        selected: true
+        status: Failed
+      - offset: 2504
+        length: 138
+        placeholder_text: "# TODO добавьте свойство publication_year (на чтение)"
+        initial_state:
+          length: 53
+          offset: 1978
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def publication_year(self):
+                  return self.__publication_year
+        selected: true
+        status: Failed
+      - offset: 3032
+        length: 137
+        placeholder_text: "# TODO Инициализируйте переменные от LibraryItem и добавьте\
+      \ новый приватный атрибут genre. Не забудьте, что нужна валидация перед запи\
+      сью"
+        initial_state:
+          length: 137
+          offset: 2421
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          super().__init__(title, author, publication_year)
+                  self.__validate_genre(genre)
+                  self.__genre = genre
+        selected: false
+        status: Failed
+      - offset: 3447
+        length: 106
+        placeholder_text: "...  # TODO написать метод валидации"
+        initial_state:
+          length: 36
+          offset: 2714
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(genre, str):
+                      raise TypeError()
+        selected: true
+        status: Failed
+      - offset: 3559
+        length: 105
+        placeholder_text: "# TODO добавьте свойство genre (на чтение)"
+        initial_state:
+          length: 42
+          offset: 2756
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def genre(self):
+                  return self.__genre
+        selected: true
+        status: Failed
+      - offset: 3670
+        length: 179
+        placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
+      нформацию специфичную для книги (Книга: 'Название книги',  Автор: 'Кто напис\
+      ал', Жанр: 'Жанр книги', Год издания: 'Год')"
+        initial_state:
+          length: 179
+          offset: 2804
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def get_info(self):
+                  return f"Книга: '{self.title}', Автор: {self.author}, Жанр: {self.genre}, Год издания: {self.publication_year}"
+        selected: false
+        status: Failed
+      - offset: 4205
+        length: 148
+        placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
+      вьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация\
+      \ перед записью"
+        initial_state:
+          length: 148
+          offset: 3187
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          super().__init__(title=title, publication_year=publication_year)
+                  self.__validate_issue_number(issue_number)
+                  self.__issue_number = issue_number
+        selected: false
+        status: Failed
+      - offset: 4683
+        length: 112
+        placeholder_text: "...  # TODO написать метод валидации"
+        initial_state:
+          length: 36
+          offset: 3505
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(issue_number, int):
+                      raise TypeError()
+        selected: true
+        status: Failed
+      - offset: 4801
+        length: 49
+        placeholder_text: "# TODO добавьте свойство issue_number (на чтение)"
+        initial_state:
+          length: 49
+          offset: 3547
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def issue_number(self):
+                  return self.__issue_number
+        selected: false
+        status: Failed
+      - offset: 4933
+        length: 166
+        placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
+      нформацию специфичную для журнала (Журнал: 'Название журнала',  Номер выпуск\
+      а: 'Номер', Год издания: 'Год')"
+        initial_state:
+          length: 166
+          offset: 3602
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def get_info(self):
+                  return f"Журнал: '{self.title}', Номер выпуска: {self.issue_number}, Год издания: {self.publication_year}"
+        selected: false
+        status: Failed
+      - offset: 5383
+        length: 149
+        placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
+      вьте новый приватный атрибут publication_date. Не забудьте, что нужна валида\
+      ция перед записью"
+        initial_state:
+          length: 152
+          offset: 3842
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __init__(self, title, publication_year, publication_date):
+                  super().__init__(title=title, publication_year=publication_year)
+                  self.__validate_publication_date(publication_date)
+                  self.__publication_date = publication_date
+        selected: true
+        status: Failed
+      - offset: 6178
+        length: 32
+        placeholder_text: "...  # TODO написать метод валидации"
+        initial_state:
+          length: 36
+          offset: 4464
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(publication_date, str):
+                      raise TypeError()
+                  if not len(date := publication_date.split('.')) == 3:
+                      raise ValueError()
+                  datetime.date(day=int(date[0]), month=int(date[1]), year=int(date[2]))
+        selected: true
+        status: Failed
+      - offset: 6452
+        length: 53
+        placeholder_text: "# TODO добавьте свойство publication_date (на чтение)"
+        initial_state:
+          length: 53
+          offset: 4506
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def publication_date(self):
+                  return self.__publication_date
+        selected: false
+        status: Failed
+      - offset: 6593
+        length: 162
+        placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
+      нформацию специфичную для газеты (Газета: 'Название газеты',  Дата выпуска:\
+      \ 'Дата', Год издания: 'Год')"
+        initial_state:
+          length: 162
+          offset: 4565
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def get_info(self):
+                  return f"Газета: '{self.title}', Дата выпуска: {self.publication_date}, Год издания: {self.publication_year}"
+        selected: false
+        status: Failed
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+  - name: library_items.json
+    visible: true
+    learner_created: false
+status: Failed
+feedback:
+  message: Incorrect
+  time: "Fri, 14 Feb 2025 18:16:13 UTC"
+  expected: |
+    Доступные материалы:
+    |                                              Материал                                              |            Статус            |
+    |----------------------------------------------------------------------------------------------------|------------------------------|
+    |Книга: 'Война и мир', Автор: Лев Толстой, Жанр: Роман, Год издания: 1869                            |           Доступно           |
+    |Книга: 'Гарри Поттер', Автор: Дж. К. Роулинг, Жанр: Фэнтези, Год издания: 1997                      |           Доступно           |
+    |Книга: '1984', Автор: Джордж Оруэлл, Жанр: Антиутопия, Год издания: 1949                            |           Доступно           |
+    |Книга: 'Преступление и наказание', Автор: Федор Достоевский, Жанр: Роман, Год издания: 1866         |           Доступно           |
+    |Книга: 'Мастер и Маргарита', Автор: Михаил Булгаков, Жанр: Мистический роман, Год издания: 1966     |           Доступно           |
+    |Журнал: 'National Geographic', Номер выпуска: 10, Год издания: 2023                                 |           Доступно           |
+    |Журнал: 'Time', Номер выпуска: 12, Год издания: 2023                                                |           Доступно           |
+    |Журнал: 'Forbes', Номер выпуска: 5, Год издания: 2023                                               |           Доступно           |
+    |Журнал: 'Вокруг света', Номер выпуска: 8, Год издания: 2023                                         |           Доступно           |
+    |Журнал: 'Popular Science', Номер выпуска: 11, Год издания: 2023                                     |           Доступно           |
+    |Газета: 'The New York Times', Дата выпуска: 01.09.2023, Год издания: 2023                           |           Доступно           |
+    |Газета: 'The Guardian', Дата выпуска: 01.09.2023, Год издания: 2023                                 |           Доступно           |
+    |Газета: 'Коммерсант', Дата выпуска: 01.09.2023, Год издания: 2023                                   |           Доступно           |
+    |Газета: 'Известия', Дата выпуска: 01.09.2023, Год издания: 2023                                     |           Доступно           |
+    |Газета: 'The Washington Post', Дата выпуска: 01.09.2023, Год издания: 2023                          |           Доступно           |
+    |----------------------------------------------------------------------------------------------------|------------------------------|
+
+    Поиск книги '1984':
+    Книга: '1984', Автор: Джордж Оруэлл, Жанр: Антиутопия, Год издания: 1949
+
+    Выдача книги '1984':
+    1984 было успешно выдано.
+    |                                              Материал                                              |            Статус            |
+    |----------------------------------------------------------------------------------------------------|------------------------------|
+    |Книга: 'Война и мир', Автор: Лев Толстой, Жанр: Роман, Год издания: 1869                            |           Доступно           |
+    |Книга: 'Гарри Поттер', Автор: Дж. К. Роулинг, Жанр: Фэнтези, Год издания: 1997                      |           Доступно           |
+    |Книга: '1984', Автор: Джордж Оруэлл, Жанр: Антиутопия, Год издания: 1949                            |            Выдано            |
+    |Книга: 'Преступление и наказание', Автор: Федор Достоевский, Жанр: Роман, Год издания: 1866         |           Доступно           |
+    |Книга: 'Мастер и Маргарита', Автор: Михаил Булгаков, Жанр: Мистический роман, Год издания: 1966     |           Доступно           |
+    |Журнал: 'National Geographic', Номер выпуска: 10, Год издания: 2023                                 |           Доступно           |
+    |Журнал: 'Time', Номер выпуска: 12, Год издания: 2023                                                |           Доступно           |
+    |Журнал: 'Forbes', Номер выпуска: 5, Год издания: 2023                                               |           Доступно           |
+    |Журнал: 'Вокруг света', Номер выпуска: 8, Год издания: 2023                                         |           Доступно           |
+    |Журнал: 'Popular Science', Номер выпуска: 11, Год издания: 2023                                     |           Доступно           |
+    |Газета: 'The New York Times', Дата выпуска: 01.09.2023, Год издания: 2023                           |           Доступно           |
+    |Газета: 'The Guardian', Дата выпуска: 01.09.2023, Год издания: 2023                                 |           Доступно           |
+    |Газета: 'Коммерсант', Дата выпуска: 01.09.2023, Год издания: 2023                                   |           Доступно           |
+    |Газета: 'Известия', Дата выпуска: 01.09.2023, Год издания: 2023                                     |           Доступно           |
+    |Газета: 'The Washington Post', Дата выпуска: 01.09.2023, Год издания: 2023                          |           Доступно           |
+    |----------------------------------------------------------------------------------------------------|------------------------------|
+
+    Попытка снова выдать книгу '1984':
+    1984 уже выдано.
+
+    Возвращение книги '1984':
+    1984 было успешно возвращено.
+    |                                              Материал                                              |            Статус            |
+    |----------------------------------------------------------------------------------------------------|------------------------------|
+    |Книга: 'Война и мир', Автор: Лев Толстой, Жанр: Роман, Год издания: 1869                            |           Доступно           |
+    |Книга: 'Гарри Поттер', Автор: Дж. К. Роулинг, Жанр: Фэнтези, Год издания: 1997                      |           Доступно           |
+    |Книга: '1984', Автор: Джордж Оруэлл, Жанр: Антиутопия, Год издания: 1949                            |           Доступно           |
+    |Книга: 'Преступление и наказание', Автор: Федор Достоевский, Жанр: Роман, Год издания: 1866         |           Доступно           |
+    |Книга: 'Мастер и Маргарита', Автор: Михаил Булгаков, Жанр: Мистический роман, Год издания: 1966     |           Доступно           |
+    |Журнал: 'National Geographic', Номер выпуска: 10, Год издания: 2023                                 |           Доступно           |
+    |Журнал: 'Time', Номер выпуска: 12, Год издания: 2023                                                |           Доступно           |
+    |Журнал: 'Forbes', Номер выпуска: 5, Год издания: 2023                                               |           Доступно           |
+    |Журнал: 'Вокруг света', Номер выпуска: 8, Год издания: 2023                                         |           Доступно           |
+    |Журнал: 'Popular Science', Номер выпуска: 11, Год издания: 2023                                     |           Доступно           |
+    |Газета: 'The New York Times', Дата выпуска: 01.09.2023, Год издания: 2023                           |           Доступно           |
+    |Газета: 'The Guardian', Дата выпуска: 01.09.2023, Год издания: 2023                                 |           Доступно           |
+    |Газета: 'Коммерсант', Дата выпуска: 01.09.2023, Год издания: 2023                                   |           Доступно           |
+    |Газета: 'Известия', Дата выпуска: 01.09.2023, Год издания: 2023                                     |           Доступно           |
+    |Газета: 'The Washington Post', Дата выпуска: 01.09.2023, Год издания: 2023                          |           Доступно           |
+    |----------------------------------------------------------------------------------------------------|------------------------------|
+  actual: "Доступные материалы:\n|                                              Ма\
+    териал                                              |            Статус      \
+    \      |\n|----------------------------------------------------------------------------------------------------|------------------------------|\n\
+    |Книга: 'Война и мир', Автор: 'Лев Толстой', Жанр: 'Роман', Год издания: 1869\
+    \                        |           Доступно           |\n|Книга: 'Гарри Потт\
+    ер', Автор: 'Дж. К. Роулинг', Жанр: 'Фэнтези', Год издания: 1997             \
+    \     |           Доступно           |\n|Книга: '1984', Автор: 'Джордж Оруэлл\
+    ', Жанр: 'Антиутопия', Год издания: 1949                        |           До\
+    ступно           |\n|Книга: 'Преступление и наказание', Автор: 'Федор Достоевс\
+    кий', Жанр: 'Роман', Год издания: 1866     |           Доступно           |\n\
+    |Книга: 'Мастер и Маргарита', Автор: 'Михаил Булгаков', Жанр: 'Мистический ром\
+    ан', Год издания: 1966 |           Доступно           |\n| Журнал: 'National Geographic',\
+    \ Номер выпуска: 10, Год издания: 2023                                |      \
+    \     Доступно           |\n| Журнал: 'Time', Номер выпуска: 12, Год издания:\
+    \ 2023                                               |           Доступно    \
+    \       |\n| Журнал: 'Forbes', Номер выпуска: 5, Год издания: 2023           \
+    \                                   |           Доступно           |\n| Журнал\
+    : 'Вокруг света', Номер выпуска: 8, Год издания: 2023                        \
+    \                |           Доступно           |\n| Журнал: 'Popular Science',\
+    \ Номер выпуска: 11, Год издания: 2023                                    |  \
+    \         Доступно           |\n|Газета: 'The New York Times', Дата выпуска: '01.09.2023',\
+    \ Год издания: 2023                         |           Доступно           |\n\
+    |Газета: 'The Guardian', Дата выпуска: '01.09.2023', Год издания: 2023       \
+    \                        |           Доступно           |\n|Газета: 'Коммерсан\
+    т', Дата выпуска: '01.09.2023', Год издания: 2023                            \
+    \     |           Доступно           |\n|Газета: 'Известия', Дата выпуска: '01.09.2023',\
+    \ Год издания: 2023                                   |           Доступно   \
+    \        |\n|Газета: 'The Washington Post', Дата выпуска: '01.09.2023', Год из\
+    дания: 2023                        |           Доступно           |\n|----------------------------------------------------------------------------------------------------|------------------------------|\n\
+    \nПоиск книги '1984':\nКнига: '1984', Автор: 'Джордж Оруэлл', Жанр: 'Антиутопи\
+    я', Год издания: 1949 \n\nВыдача книги '1984':\n1984 было успешно выдано.\n| \
+    \                                             Материал                       \
+    \                       |            Статус            |\n|----------------------------------------------------------------------------------------------------|------------------------------|\n\
+    |Книга: 'Война и мир', Автор: 'Лев Толстой', Жанр: 'Роман', Год издания: 1869\
+    \                        |           Доступно           |\n|Книга: 'Гарри Потт\
+    ер', Автор: 'Дж. К. Роулинг', Жанр: 'Фэнтези', Год издания: 1997             \
+    \     |           Доступно           |\n|Книга: '1984', Автор: 'Джордж Оруэлл\
+    ', Жанр: 'Антиутопия', Год издания: 1949                        |            В\
+    ыдано            |\n|Книга: 'Преступление и наказание', Автор: 'Федор Достоевс\
+    кий', Жанр: 'Роман', Год издания: 1866     |           Доступно           |\n\
+    |Книга: 'Мастер и Маргарита', Автор: 'Михаил Булгаков', Жанр: 'Мистический ром\
+    ан', Год издания: 1966 |           Доступно           |\n| Журнал: 'National Geographic',\
+    \ Номер выпуска: 10, Год издания: 2023                                |      \
+    \     Доступно           |\n| Журнал: 'Time', Номер выпуска: 12, Год издания:\
+    \ 2023                                               |           Доступно    \
+    \       |\n| Журнал: 'Forbes', Номер выпуска: 5, Год издания: 2023           \
+    \                                   |           Доступно           |\n| Журнал\
+    : 'Вокруг света', Номер выпуска: 8, Год издания: 2023                        \
+    \                |           Доступно           |\n| Журнал: 'Popular Science',\
+    \ Номер выпуска: 11, Год издания: 2023                                    |  \
+    \         Доступно           |\n|Газета: 'The New York Times', Дата выпуска: '01.09.2023',\
+    \ Год издания: 2023                         |           Доступно           |\n\
+    |Газета: 'The Guardian', Дата выпуска: '01.09.2023', Год издания: 2023       \
+    \                        |           Доступно           |\n|Газета: 'Коммерсан\
+    т', Дата выпуска: '01.09.2023', Год издания: 2023                            \
+    \     |           Доступно           |\n|Газета: 'Известия', Дата выпуска: '01.09.2023',\
+    \ Год издания: 2023                                   |           Доступно   \
+    \        |\n|Газета: 'The Washington Post', Дата выпуска: '01.09.2023', Год из\
+    дания: 2023                        |           Доступно           |\n|----------------------------------------------------------------------------------------------------|------------------------------|\n\
+    \nПопытка снова выдать книгу '1984':\n1984 уже выдано.\n\nВозвращение книги '1984':\n\
+    1984 было успешно возвращено.\n|                                             \
+    \ Материал                                              |            Статус  \
+    \          |\n|----------------------------------------------------------------------------------------------------|------------------------------|\n\
+    |Книга: 'Война и мир', Автор: 'Лев Толстой', Жанр: 'Роман', Год издания: 1869\
+    \                        |           Доступно           |\n|Книга: 'Гарри Потт\
+    ер', Автор: 'Дж. К. Роулинг', Жанр: 'Фэнтези', Год издания: 1997             \
+    \     |           Доступно           |\n|Книга: '1984', Автор: 'Джордж Оруэлл\
+    ', Жанр: 'Антиутопия', Год издания: 1949                        |           До\
+    ступно           |\n|Книга: 'Преступление и наказание', Автор: 'Федор Достоевс\
+    кий', Жанр: 'Роман', Год издания: 1866     |           Доступно           |\n\
+    |Книга: 'Мастер и Маргарита', Автор: 'Михаил Булгаков', Жанр: 'Мистический ром\
+    ан', Год издания: 1966 |           Доступно           |\n| Журнал: 'National Geographic',\
+    \ Номер выпуска: 10, Год издания: 2023                                |      \
+    \     Доступно           |\n| Журнал: 'Time', Номер выпуска: 12, Год издания:\
+    \ 2023                                               |           Доступно    \
+    \       |\n| Журнал: 'Forbes', Номер выпуска: 5, Год издания: 2023           \
+    \                                   |           Доступно           |\n| Журнал\
+    : 'Вокруг света', Номер выпуска: 8, Год издания: 2023                        \
+    \                |           Доступно           |\n| Журнал: 'Popular Science',\
+    \ Номер выпуска: 11, Год издания: 2023                                    |  \
+    \         Доступно           |\n|Газета: 'The New York Times', Дата выпуска: '01.09.2023',\
+    \ Год издания: 2023                         |           Доступно           |\n\
+    |Газета: 'The Guardian', Дата выпуска: '01.09.2023', Год издания: 2023       \
+    \                        |           Доступно           |\n|Газета: 'Коммерсан\
+    т', Дата выпуска: '01.09.2023', Год издания: 2023                            \
+    \     |           Доступно           |\n|Газета: 'Известия', Дата выпуска: '01.09.2023',\
+    \ Год издания: 2023                                   |           Доступно   \
+    \        |\n|Газета: 'The Washington Post', Дата выпуска: '01.09.2023', Год из\
+    дания: 2023                        |           Доступно           |\n|----------------------------------------------------------------------------------------------------|------------------------------|\n"
+record: -1

@@ -1,0 +1,47 @@
+type: output
+files:
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 745
+        length: 0
+        placeholder_text: "pass # TODO дописать метод"
+        initial_state:
+          length: 26
+          offset: 282
+        initialized_from_dependency: false
+        encrypted_possible_answer: pass
+        selected: true
+        status: Solved
+      - offset: 807
+        length: 31
+        placeholder_text: "pass # TODO дописать метод"
+        initial_state:
+          length: 26
+          offset: 341
+        initialized_from_dependency: false
+        encrypted_possible_answer: pass
+        selected: true
+        status: Solved
+      - offset: 943
+        length: 0
+        placeholder_text: "pass # TODO дописать метод"
+        initial_state:
+          length: 26
+          offset: 401
+        initialized_from_dependency: false
+        encrypted_possible_answer: pass
+        selected: true
+        status: Solved
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 04 Feb 2025 13:26:15 UTC"
+record: -1

@@ -1,0 +1,59 @@
+type: output
+files:
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 253
+        length: 60
+        placeholder_text: "# TODO Импортируйте и скопируйте ранее написанный класс Book"
+        initial_state:
+          length: 60
+          offset: 220
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          class Book:
+              ...
+        selected: false
+        status: Failed
+      - offset: 1561
+        length: 262
+        placeholder_text: "pass # TODO дописать метод"
+        initial_state:
+          length: 26
+          offset: 586
+        initialized_from_dependency: false
+        encrypted_possible_answer: pass
+        selected: true
+        status: Failed
+      - offset: 2194
+        length: 31
+        placeholder_text: "pass # TODO дописать метод"
+        initial_state:
+          length: 26
+          offset: 840
+        initialized_from_dependency: false
+        encrypted_possible_answer: pass
+        selected: true
+        status: Failed
+      - offset: 2639
+        length: 226
+        placeholder_text: "pass # TODO дописать метод"
+        initial_state:
+          length: 26
+          offset: 1280
+        initialized_from_dependency: false
+        encrypted_possible_answer: pass
+        selected: true
+        status: Failed
+    learner_created: false
+status: Failed
+feedback:
+  message: Error during execution
+  time: "Fri, 14 Feb 2025 15:17:54 UTC"
+record: -1
